@@ -1,0 +1,14 @@
+<div class="home">
+  <img  src="http://www.youthincmag.com/wp-content/uploads/2016/07/8-Books-That-Will-Leave-You-Feeling-Amazing-And-On-Top-Of-The-World.jpg" alt="">
+    <h1 class="text-center">Welcome to Personality Analysis Test!</h1>
+     <div class="group" *ngIf = "!isValid">
+      <h2 class="text-center">Who are you?</h2>
+      <button [disabled]="isValid" (click)="onTeacher()">Personality Analyst</button>
+      <button [disabled]="isValid" (click)="onStudent()">User</button>
+     </div>
+     <h3 *ngIf = "isValid" class="text-center">Please logout from your currrent account!</h3>
+     <button *ngIf = "isValid" class="dash" [disabled]="teacher" (click)="teacherd()">Teacher Dashboard</button>
+     <button *ngIf = "isValid" class="dash2" [disabled]="student" (click)="studentd()">Student dashboard</button>
+</div>
+
+ 
